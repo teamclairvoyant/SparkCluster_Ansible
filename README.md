@@ -34,7 +34,6 @@ Below is a host inventory sample definition:
 [all:vars]
 ansible_connection=ssh
 ansible_become=true
-#ansible_user=root
 ansible_ssh_private_key_file=~/.ssh/id_rsa
 gather_facts=True
 gathering=smart
