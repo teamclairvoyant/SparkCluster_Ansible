@@ -1,0 +1,7 @@
+export SPARK_HOME={{ install_dir }}/spark-{{ spark.version }}-bin-hadoop{{ spark.hadoop_version }}
+export PYSPARK_PYTHON='/usr/bin/python3'
+export JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
+
+export PATH=$PATH:$SPARK_HOME:\$JAVA_HOME:\$PYSPARK_PYTHON
+
+

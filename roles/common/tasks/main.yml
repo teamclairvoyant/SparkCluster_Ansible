@@ -1,0 +1,16 @@
+- name: create install dir
+  file: path="{{ install_dir }}" state=directory
+
+
+- name: create temporary install dir
+  file: path="{{ install_temp_dir }}" state=directory
+
+
+- name: create spark history server dir
+  file: path="{{ spark_history_dir }}" state=directory
+
+- import_tasks: os-packages.yml
+
+- import_tasks: ssh-config.yml
+
+

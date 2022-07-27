@@ -1,0 +1,10 @@
+- name: upgrade all packages
+  shell:
+      apt-get update -y
+
+- name: install commonly used os dependencies
+  shell:
+      apt-get install -y openjdk-8-jdk-headless software-properties-common openssh-server openssh-client python3.8
+
+- name: clean yum repository
+  shell: "apt-get clean"

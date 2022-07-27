@@ -1,0 +1,13 @@
+ansible_connection: ssh
+ansible_user: root
+
+gather_facts: True
+gathering: smart
+
+host_key_checking: False
+
+install_temp_dir: /tmp/ansible-install
+install_dir: /opt/spark/
+spark_history_dir: /tmp/spark-events
+
+
