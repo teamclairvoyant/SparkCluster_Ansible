@@ -34,12 +34,9 @@ Below is a host inventory sample definition:
 [all:vars]
 ansible_connection=ssh
 ansible_become=true
-ansible_ssh_private_key_file=~/.ssh/id_rsa
 gather_facts=True
 gathering=smart
-ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 install_temp_dir=/tmp/ansible-install
-install_dir=/opt
 spark_history_dir=/tmp/spark-events
 python_version=2
 
@@ -57,10 +54,8 @@ Some specific configurations are:
 
 * install_java=True : install/update java 8
 * install_temp_dir=/tmp/ansible-install : temporary folder used for install files
-* install_dir=/opt : where packages are installed (e.g. Spark)
+* install_dir=/opt/spark : where packages are installed (e.g. Spark)
 * python_version=2 : python version to use
-
-
 
 # Deploying Spark standalone
 
@@ -70,6 +65,9 @@ In this scenario, a Standalone Spark cluster will be deployed with a few optiona
 
 * **Common**  Deploys Java and common dependencies
 * **Spark** Deploys Spark in Standalone mode using slave nodes as workers
+
+Custom configs can be set in roles/spark/defaults/main.yml
+
 
 ### Deployment playbook
 
