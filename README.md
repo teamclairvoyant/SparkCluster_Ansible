@@ -80,5 +80,6 @@ Custom configs can be set in roles/spark/defaults/main.yml
     - role: spark
 
 ```
-Deploying
+Deploying Playbook:
+
 ```ansible-playbook spark_setup.yml -i inventory```
