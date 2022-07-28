@@ -13,5 +13,5 @@ spark:
 
   env_extras: {}
   defaults_extras: {}
-  defaults_extras_master: {}
+  defaults_extras_master: {"spark.eventLog.enabled":"true","spark.eventLog.dir":"file://{{ spark_history_dir }}","spark.history.fs.logDirectory":"file://{{ spark_history_dir }}"}
   defaults_extras_nodes: {}
